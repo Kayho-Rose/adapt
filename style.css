@@ -1,0 +1,136 @@
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+body{
+    margin: 0;
+    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+}
+
+.intro,
+.main-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+.intro{
+    justify-content: space-between;
+    background-color: orange;
+    min-height: 350px;
+    padding-bottom: 1em;
+}
+
+.intro h1{
+    order: 0;
+}
+
+.intro h3{
+    order: 1;
+}
+
+.intro p{
+    order: -1;
+    border-top: 0.2em solid black;
+    margin: 0.5em auto;
+}
+
+.main-content{
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5em;
+}
+
+.container{
+    max-width: 500px;
+}
+
+/*Font style*/
+
+h1{
+    font-size: 2rem;
+}
+
+h1 span{
+    color: white;
+}
+
+.intro h3,
+.intro p{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-content h3{
+    color: rgb(80, 80, 80);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.main-content h4{
+    color: orange;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.beta-text{
+    color: rgb(193, 193, 193);
+    font-size: 0.75rem;
+    margin: 0.25em;
+}
+
+/*Form*/
+form{
+    margin: 0;
+}
+
+input,
+button {
+    font-family: inherit;
+    width: 75%; 
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+}
+
+input{
+    font-size: 1.125rem;
+    border: 2px solid gray;
+}
+
+.btn{
+    background-color: orange;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    padding: 0.4em ;
+    letter-spacing: 1px;
+    border: none;
+}
+
+/*Media quare*/
+
+@media (min-width: 576px){
+    body{
+        display: flex;
+    }
+
+    .intro,
+    .main-content{
+        width: 50%;
+    }
+
+    .intro{
+        min-height: 100vh;
+    }
+    
+    h1 {
+        font-size: 4vw;
+    }
+}
